@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perspective</title>
+    <style type="text/css">
+      * {
+        perspective: 500px;
+      }
+      body {
+        height: 100vh;
+        display: grid;
+        place-items: center;
+      }
+      /* .container {
+        perspective: 500px;
+      } */
+      .container img {
+        width: 300px;
+        transition: transform 2s linear;
+      }
+      .container img:hover {
+        /* transform: translateZ(300px); */
+        /* transform: translateZ(400px); */
+        /* transform: translateZ(450px); */
+
+        /* transform: translateZ(-300px); */
+        transform: translateZ(-500px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container"><img src="img/img.jpg" alt="photo" /></div>
+  </body>
+</html>
