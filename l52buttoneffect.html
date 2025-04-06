@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>button effect</title>
+    <style type="text/css">
+      body {
+        height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .btn {
+        background: linear-gradient(200deg, skyblue, pink);
+        font-size: 40px;
+        border: none;
+        border-radius: 40px;
+        cursor: pointer;
+
+        padding: 20px;
+
+        position: relative;
+      }
+      .btn::after {
+        content: "10% OFF";
+        background-color: orange;
+        font-size: 16px;
+        border-radius: 25px;
+        padding: 5px;
+
+        position: absolute;
+        right: 10px;
+        top: -10px;
+        transition: all 0.5s linear;
+      }
+      .btn:hover::after {
+        background-color: red;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <button type="button" class="btn">Add to Card...</button>
+  </body>
+</html>

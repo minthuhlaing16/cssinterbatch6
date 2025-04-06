@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Button Effect</title>
+    <style type="text/css">
+      body {
+        height: 100vh;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .btn {
+        width: 300px;
+        height: 100px;
+        background-color: #222;
+        color: white;
+        font-size: 40px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        position: relative;
+      }
+      .btn .line {
+        width: 5px;
+        height: 5px;
+        background-color: transparent;
+
+        position: absolute;
+        left: 50%;
+        top: 0;
+
+        transform: translateX(-50%);
+        transition: all 0.5s ease;
+      }
+      .btn:hover .line {
+        width: 200px;
+        height: 80px;
+        /* background-color: green; */
+
+        border-radius: 10px;
+        border-bottom: 2px solid #f0f0f0;
+      }
+      .btn:hover {
+        background-color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <button type="button" class="btn">
+      Hover Me <span class="line"></span>
+    </button>
+  </body>
+</html>
