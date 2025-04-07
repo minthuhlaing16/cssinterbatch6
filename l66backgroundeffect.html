@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background effect</title>
+    <style type="text/css">
+      body {
+        height: 100vh;
+        background-color: #000;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container {
+        /* width:500px;
+           height:500px; 
+        */
+
+        width: 100%;
+        height: 100%;
+      }
+      .heart {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: relative;
+        transform: rotate(-45deg);
+        opacity: 0;
+        animation-name: myani;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+      .heart::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: red;
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        transform: translateY(-50%);
+      }
+      .heart::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: red;
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        transform: translate(50%);
+      }
+      @keyframes myani {
+        from {
+          opacity: 1;
+          top: 0;
+        }
+        to {
+          opacity: 0;
+          top: 100%;
+        }
+      }
+      .heart:nth-of-type(1) {
+        width: 10px;
+        height: 10px;
+        left: 7%;
+        animation-delay: 1s;
+      }
+      .heart:nth-of-type(2) {
+        width: 45px;
+        height: 45px;
+        left: 10%;
+        animation-delay: 2s;
+      }
+      .heart:nth-of-type(3) {
+        width: 20px;
+        height: 20px;
+        left: 45%;
+        animation-delay: 3s;
+      }
+      .heart:nth-of-type(4) {
+        width: 35px;
+        height: 35px;
+        left: 27%;
+        animation-delay: 3s;
+      }
+      .heart:nth-of-type(5) {
+        width: 10px;
+        height: 10px;
+        left: 7%;
+        animation-delay: 1s;
+      }
+      .heart:nth-of-type(6) {
+        width: 30px;
+        height: 30px;
+        left: 77%;
+        animation-delay: 4s;
+      }
+      .heart:nth-of-type(7) {
+        width: 40px;
+        height: 40px;
+        left: 55%;
+        animation-delay: 5s;
+      }
+      .heart:nth-of-type(8) {
+        width: 50px;
+        height: 50px;
+        left: 88%;
+        animation-delay: 7s;
+      }
+      .heart:nth-of-type(9) {
+        width: 45px;
+        height: 45px;
+        left: 90%;
+        animation-delay: 11s;
+      }
+      .heart:nth-of-type(10) {
+        width: 100px;
+        height: 100px;
+        left: 50%;
+        animation-delay: 6s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="heart"></div>
+      <div class="heart"></div>
+      <div class="heart"></div>
+      <div class="heart"></div>
+      <div class="heart"></div>
+      <div class="heart"></div>
+      <div class="heart"></div>
+      <div class="heart"></div>
+      <div class="heart"></div>
+      <div class="heart"></div>
+    </div>
+  </body>
+</html>

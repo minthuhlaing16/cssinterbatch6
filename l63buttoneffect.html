@@ -6,15 +6,77 @@
     <title>Button Effect</title>
     <style type="text/css">
       body {
+        font-family: monospace;
         height: 100vh;
+        background-color: #000;
 
         display: flex;
         justify-content: center;
         align-items: center;
       }
+      .btn {
+        width: 300px;
+        height: 80px;
+        background-color: #111;
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        position: relative;
+      }
+      .btn::before {
+        content: "";
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        background: linear-gradient(
+          70deg,
+          blue,
+          red,
+          orange,
+          yellow,
+          green,
+          purple,
+          gold,
+          pink,
+          black,
+          white,
+          blue,
+          crimson,
+          navy,
+          violet
+        );
+        background-size: 400px;
+        border-radius: inherit;
+
+        position: absolute;
+        left: -2px;
+        top: -2px;
+        opacity: 0;
+        z-index: -1;
+        transition: all 0.5s;
+      }
+      .btn:hover::before {
+        opacity: 1;
+        animation: lighting 5s linear infinite;
+      }
+      .btn:active {
+        background: transparent;
+        color: rgb(241, 8, 210);
+      }
+      @keyframes lighting {
+        0% {
+          background-position: 0;
+        }
+        50% {
+          background-position: 500% 0;
+        }
+        100% {
+          background-position: 0 0;
+        }
+      }
     </style>
   </head>
   <body>
-    <a href="#" class="btn">Hover Me</a>
+    <button type="button" class="btn">Hover Me and then Press Me !!!</button>
   </body>
 </html>

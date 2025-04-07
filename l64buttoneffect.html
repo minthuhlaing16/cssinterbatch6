@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Button Effect</title>
+    <style type="text/css">
+      body {
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .btn {
+        width: 200px;
+        background-color: #111;
+        color: #fff;
+        font-size: 20px;
+        text-transform: uppercase;
+        letter-spacing: 10px;
+        border: none;
+        border-radius: 40px;
+        cursor: pointer;
+
+        padding: 20px 50px;
+
+        position: relative;
+        overflow: hidden;
+      }
+      .btn .wave {
+        width: 200px;
+        height: 200px;
+        background-color: lightblue;
+
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        transition: all 0.5s linear;
+      }
+      .btn .wave::before,
+      .btn .wave::after {
+        content: "";
+
+        width: 200%;
+        height: 200%;
+        /* background-color: steelblue; */
+
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      .btn .wave::before {
+        background-color: rgba(0, 0, 0, 0.1);
+        border-radius: 45%;
+
+        animation: wave 5s linear infinite;
+      }
+      .btn .wave::after {
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 40%;
+
+        animation: wave 5s linear infinite;
+      }
+      @keyframes wave {
+        from {
+          transform: translate(-25%, -90%) rotate(0deg);
+        }
+        to {
+          transform: translate(-25%, -90%) rotate(360deg);
+        }
+      }
+      .btn span {
+        position: relative;
+        z-index: 1;
+      }
+      .btn:hover .wave {
+        top: -30px;
+      }
+    </style>
+  </head>
+  <body>
+    <button type="button" class="btn">
+      <span>Hover Me</span><em class="wave"></em>
+    </button>
+  </body>
+</html>

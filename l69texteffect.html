@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>text effect</title>
+    <style type="text/css">
+      body {
+        height: 100vh;
+        font-family: sans-serif;
+        background-color: black;
+
+        padding: 0;
+        margin: 0;
+
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+
+        display: grid;
+        place-items: center;
+      }
+      h1 {
+        color: transparent;
+        font-size: 3rem;
+        text-transform: uppercase;
+        letter-spacing: 10px;
+
+        /* -webkit-text-stroke: 2px;
+            -webkit-text-stroke-color: red; */
+
+        -webkit-text-stroke: 3px red;
+
+        white-space: nowrap;
+        position: relative;
+        overflow: hidden;
+      }
+      h1::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        animation-name: myani;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-direction: alternate;
+      }
+
+      @keyframes myani {
+        from {
+          left: 100%;
+        }
+        to {
+          left: 0%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>THANK YOU FOR SHOPPING WITH US...</h1>
+  </body>
+</html>
