@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>spinner</title>
+    <style type="text/css">
+      body {
+        height: 100vh;
+        background-color: darkgreen;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 0;
+        margin: 0;
+      }
+      .spinnerone,
+      .spinnertwo,
+      .spinnerthree,
+      .spinnerfour {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 15px solid #f1f1f1;
+        border-top: 15px solid crimson;
+
+        animation: myspinner 2s linear infinite;
+      }
+      .spinnertwo {
+        border-top: 15px solid navy;
+        border-bottom: 15px solid crimson;
+      }
+      .spinnerthree {
+        border-top: 15px solid gold;
+        border-bottom: 15px solid navy;
+        border-left: 15px solid crimson;
+      }
+      .spinnerfour {
+        border-top: 15px solid gold;
+        border-bottom: 15px solid navy;
+        border-left: 15px solid crimson;
+        border-right: 15px solid purple;
+      }
+      @keyframes myspinner {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(1turn);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="spinnerone"></div>
+    <div class="spinnertwo"></div>
+    <div class="spinnerthree"></div>
+    <div class="spinnerfour"></div>
+  </body>
+</html>
